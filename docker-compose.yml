@@ -10,6 +10,9 @@ services:
   build:
     context: .
     dockerfile: dockerfile
+
+  ports:
+       - 80:80
   
   volumes:
       - .:/var/www/html

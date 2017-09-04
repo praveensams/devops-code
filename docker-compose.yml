@@ -1,0 +1,23 @@
+---
+version: '2.0'
+
+services:
+
+ apache:
+  
+  container_name: mongodb
+  
+  build:
+    context: .
+    dockerfile: dockerfile
+  
+  volumes:
+      - .:/var/www/html
+
+  networks:
+     - bridge-conn
+
+
+networks:
+   bridge-conn:
+    driver: bridge
